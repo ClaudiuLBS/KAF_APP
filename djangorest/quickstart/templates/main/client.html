@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    {{ client.username }}
+{% endblock title %}
+
+
+{% block content %}
+    <h2>username: {{ client.username }}</h2>
+    <ul style="font-size: 1.3rem;">
+        <li>phone: {{ client.phone }}</li>
+        <li>gold: {{ client.gold }}</li>
+        <li>silver: {{ client.silver }}</li>
+        <li>rank: {{client.rank }}</li>
+    </ul>
+    <form method="POST">
+        {% csrf_token %}
+        <div style="margin-bottom: 1em;">
+            <button name="add" type="submit" class="btn btn-primary" value="1">Add 1</button>
+            <button name="add" type="submit" class="btn btn-primary" value="2">Add 2</button>
+            <button name="add" type="submit" class="btn btn-primary" value="3">Add 3</button>
+        </div>
+        <div style="margin-bottom: 1em;">
+            {% if client.gold > 0%}
+                <button name="add" type="submit" class="btn btn-danger" value="-1">Remove 1</button>
+            {% endif %}
+
+            {% if client.gold > 1 %}
+                <button name="add" type="submit" class="btn btn-danger" value="-2">Remove 2</button>
+            {% endif %}
+            
+            {% if client.gold > 2 %}
+                <button name="add" type="submit" class="btn btn-danger" value="-3">Remove 3</button>
+            {% endif %}
+        </div>
+
+    </form>
+{% endblock content %}
