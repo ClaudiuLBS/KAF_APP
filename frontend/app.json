@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "kaf",
+    "slug": "kaf",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/info_icon.png",
+    "splash": {
+      "image": "./assets/background.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/info_icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/info_icon.png"
+    }
+  }
+}
