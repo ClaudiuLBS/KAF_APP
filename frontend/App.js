@@ -24,7 +24,7 @@ class App extends React.Component {
 	async componentDidMount() {
     // this.setState({isLoading: false})
 		try {
-			const response = await fetch('https://28e1-89-44-238-57.eu.ngrok.io/api/consumer/2/');
+			const response = await fetch('localhost:8000/api/consumer/2/');
 			const dataJson = await response.json();
 			this.setState(
 				{
